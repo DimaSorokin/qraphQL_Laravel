@@ -1,24 +1,29 @@
 <template>
     <div class="container">
         <div class="card-columns">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Project title
-                    </h5>
-                    <p class="card-text">
-                        this the description
-                    </p>
-                    
-                </div>
-            </div>
+           <project-card v-for="project in projects"
+                         :project="project"
+                         :key="project.id"></project-card>
         </div>
     </div>
 </template>
-
 <script>
+    import axios from 'axios';
+    import ProjectCard from "../ProjectCard";
     export default {
-        name: "Dashboard"
+        components: {ProjectCard},
+        data(){
+            return {
+                projects: [],
+            }
+        },
+        created(){
+            axios.post('/graphql', {
+                query: this.$apiQueries.dashboard,
+            }).then(res => {
+                this.projects = res.data.data.projects
+            })
+        }
     }
 </script>
 

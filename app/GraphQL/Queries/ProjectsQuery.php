@@ -15,12 +15,21 @@ class ProjectsQuery extends Query
         'name' => 'The Projects query',
         'description' => 'Retrieves projects',
     ];
+    public function args(): array
+    {
+        return [
+          'projectId' => ['type' => GraphqlType::int()]
+        ];
+    }
 
     public function type() : GraphqlType
     {
         return GraphqlType::listOf(GraphQL::type('project'));
     }
     public function resolve($root, $args){
+        if(isset($args['projectId'])){
+            return Project::where('id', $args['projectId'])->get();
+        }
         return Project::all();
     }
 }
