@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Types;
 
-use App\Project;
+use App\Task;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
-class ProjectTypes extends GraphQLType
+class TaskTypes extends GraphQLType
 {
     protected $attributes = [
-        'name' => 'ProjectTypes',
-        'description' => 'A type',
-        'model' => Project::class,
+        'name' => 'Task',
+        'description' => 'A tasks',
+        'model' => Task::class,
     ];
 
     public function fields(): array
@@ -30,12 +30,18 @@ class ProjectTypes extends GraphQLType
             'description' => [
                 'type' => Type::nonNull(Type::string())
             ],
-            'manager' => [
-                'type' => Type::nonNull(GraphQL::type('user'))
+            'status_code' => [
+                'type' => Type::nonNull(Type::string())
             ],
-            'users' => [
-                'type' => Type::listOf(GraphQL::type('task'))
+            'project' => [
+                'type' => Type::nonNull(GraphQL::type('project'))
+            ],
+            'user' => [
+                'type' => Type::nonNull(GraphQL::type('user'))
             ]
         ];
+    }
+    protected function resolveStatusCodeField($root, $args){
+        return $root->status_code;
     }
 }

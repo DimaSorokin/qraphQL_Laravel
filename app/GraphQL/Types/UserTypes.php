@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Types;
 
-use App\Project;
+use App\User;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
-class ProjectTypes extends GraphQLType
+class UserTypes extends GraphQLType
 {
     protected $attributes = [
-        'name' => 'ProjectTypes',
-        'description' => 'A type',
-        'model' => Project::class,
+        'name' => 'User',
+        'description' => 'A users',
+        'model' => User::class,
     ];
 
     public function fields(): array
@@ -24,18 +24,12 @@ class ProjectTypes extends GraphQLType
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'The projects\`s ID',
             ],
-            'title' => [
+            'email' => [
                 'type' => Type::nonNull(Type::string())
             ],
-            'description' => [
+            'name' => [
                 'type' => Type::nonNull(Type::string())
             ],
-            'manager' => [
-                'type' => Type::nonNull(GraphQL::type('user'))
-            ],
-            'users' => [
-                'type' => Type::listOf(GraphQL::type('task'))
-            ]
         ];
     }
 }

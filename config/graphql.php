@@ -123,6 +123,8 @@ return [
     //
     'types' => [
         'project' => App\GraphQL\Types\ProjectTypes::class,
+        'user' => App\GraphQL\Types\UserTypes::class,
+        'task' => App\GraphQL\Types\TaskTypes::class,
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
