@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b5f5b06-cc8d-4d9f-9dcb-d7f07c6c1dfd" name="Default Changelist" comment="add single project components with prepared query data">
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Types/TaskTypes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Types/UserTypes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterDir="false" />
+    <list default="true" id="5b5f5b06-cc8d-4d9f-9dcb-d7f07c6c1dfd" name="Default Changelist" comment="defining other graphql types">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/StatusBadge.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Types/ProjectTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Types/ProjectTypes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Types/TaskTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Types/TaskTypes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/views/Project.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/views/Project.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/queries.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -174,7 +168,8 @@
       <workItem from="1570985597236" duration="1139000" />
       <workItem from="1570986765947" duration="97000" />
       <workItem from="1570986916228" duration="178000" />
-      <workItem from="1570987380570" duration="4853000" />
+      <workItem from="1570987380570" duration="5616000" />
+      <workItem from="1571039100039" duration="3067000" />
     </task>
     <servers />
   </component>
@@ -196,6 +191,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add single project components with prepared query data" />
-    <option name="LAST_COMMIT_MESSAGE" value="add single project components with prepared query data" />
+    <MESSAGE value="defining other graphql types" />
+    <option name="LAST_COMMIT_MESSAGE" value="defining other graphql types" />
   </component>
 </project>

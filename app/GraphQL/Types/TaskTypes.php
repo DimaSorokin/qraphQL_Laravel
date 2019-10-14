@@ -30,7 +30,7 @@ class TaskTypes extends GraphQLType
             'description' => [
                 'type' => Type::nonNull(Type::string())
             ],
-            'status_code' => [
+            'statusCode' => [
                 'type' => Type::nonNull(Type::string())
             ],
             'project' => [
