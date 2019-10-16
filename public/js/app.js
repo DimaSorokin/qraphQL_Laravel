@@ -53315,11 +53315,11 @@ var queries = {
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.$query = function (queryName, queryVariables) {
   var options = {
     url: '/graphql',
-    methods: 'POST',
+    method: 'POST',
     data: {
       query: queries[queryName]
     }
-  };
+  }; // console.log(queries['dashboard']);
 
   if (queryVariables) {
     options.data.variables = queryVariables;

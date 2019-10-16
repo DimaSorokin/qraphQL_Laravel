@@ -18,18 +18,19 @@ let queries = {
                         }
                      }
                     }
-                }`
+                }`,
 };
 
 
 Vue.prototype.$query = function(queryName, queryVariables){
     let options = {
         url: '/graphql',
-        methods: 'POST',
+        method: 'POST',
         data: {
             query: queries[queryName]
         },
     };
+    // console.log(queries['dashboard']);
     if(queryVariables){
         options.data.variables = queryVariables;
     }
