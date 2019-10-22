@@ -25,15 +25,19 @@ let queries = {
     check: `query CheckUserAuth {
         check
     }`,
+    register: `mutation RegisterUser($displayName: String, $email: String, $password: String) {
+        register(displayName: $displayName, email: $email, password: $password)
+    }`,
 };
 
 let guestQueries = [
-    'login'
+    'login',
+    'register',
 ];
 
 function getApiUrl(queryName){
     let segment = '';
-    if(guestQueries.some(q => q == queryName)){
+    if(guestQueries.some(q => q === queryName)){
         segment = '/guest';
     }
     return `/graphql${segment}`;

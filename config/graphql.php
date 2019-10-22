@@ -115,7 +115,8 @@ return [
         'guest'=> [
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
-                'login' => App\GraphQL\Mutations\LoginMutation::class
+                'login' => App\GraphQL\Mutations\LoginMutation::class,
+                'register' => App\GraphQL\Mutations\RegisterMutation::class
             ],
         ],
     ],
