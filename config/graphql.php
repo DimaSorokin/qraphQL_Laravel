@@ -103,6 +103,7 @@ return [
         'default' => [
             'query' => [
                  'projects' => App\GraphQL\Queries\ProjectsQuery::class,
+                 'check' => App\GraphQL\Queries\CheckAuthQuery::class,
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
