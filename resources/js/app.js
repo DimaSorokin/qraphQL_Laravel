@@ -9,8 +9,9 @@ window.Vue = require('vue');
 
 Vue.use(VueRouter);
 const router = new VueRouter({routes});
+
 router.beforeEach((to, from, next)=>{
-    if(to.matched.some(m => m.meta.requiresAuth == false)){
+    if(to.matched.some(m => m.meta.requiresAuth === false)){
         next();
         return
     }
@@ -20,6 +21,9 @@ router.beforeEach((to, from, next)=>{
         router.push('/login');
     })
 });
+
+Vue.prototype.$appEvents = new Vue();
+
 new Vue({
     router,
     render: h => h(App)

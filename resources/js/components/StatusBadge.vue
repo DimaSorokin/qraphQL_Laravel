@@ -19,7 +19,6 @@
         methods: {
             getstatusText() {
                 let status = this.status.toUpperCase();
-                console.log(status);
                 if (status == "COMP") {
                     return "Complete";
                 } else if (status == "OPEN") {

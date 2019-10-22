@@ -39,6 +39,7 @@
 
                     if(token){
                         sessionStorage.setItem('api-token', token);
+                        this.$appEvents.$emit('log-on');
                         this.$router.push('/');
                     }else{
                         this.errorMessage = "The email and adress is incorrect";
