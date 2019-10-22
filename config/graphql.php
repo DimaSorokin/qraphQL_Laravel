@@ -106,10 +106,16 @@ return [
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
+//                'login' => App\GraphQL\Mutations\LoginMutation::class
+            ],
+            'middleware' => ['auth'],
+            'method'     => ['get', 'post'],
+        ],
+        'guest'=> [
+            'mutation' => [
+                // 'example_mutation'  => ExampleMutation::class,
                 'login' => App\GraphQL\Mutations\LoginMutation::class
             ],
-            'middleware' => [],
-            'method'     => ['get', 'post'],
         ],
     ],
 

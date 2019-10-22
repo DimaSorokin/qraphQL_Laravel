@@ -27,7 +27,6 @@
 </template>
 
 <script>
-    import axios from 'axios';
     import StatusBadge from  '../StatusBadge';
     export default {
         components: {StatusBadge},

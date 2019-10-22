@@ -2065,9 +2065,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _StatusBadge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../StatusBadge */ "./resources/js/components/StatusBadge.vue");
+/* harmony import */ var _StatusBadge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../StatusBadge */ "./resources/js/components/StatusBadge.vue");
 //
 //
 //
@@ -2096,11 +2094,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    StatusBadge: _StatusBadge__WEBPACK_IMPORTED_MODULE_1__["default"]
+    StatusBadge: _StatusBadge__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -53326,10 +53323,23 @@ var queries = {
   singleProject: "query fetchSingleProjects($projectId: Int){ \n        projects(projectId: $projectId){\n                    id,\n                    title,\n                    description,\n                    tasks {\n                        id,\n                        title,\n                        description,\n                        statusCode,\n                        user {\n                            name\n                        }\n                     }\n                    }\n                }",
   login: "mutation LoginUser($email: String, $password: String) {\n        login(email: $email, password: $password)\n    }"
 };
+var guestQueries = ['login'];
+
+function getApiUrl(queryName) {
+  var segment = '';
+
+  if (guestQueries.some(function (q) {
+    return q == queryName;
+  })) {
+    segment = '/guest';
+  }
+
+  return "/graphql".concat(segment);
+}
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.$query = function (queryName, queryVariables) {
   var options = {
-    url: '/graphql',
+    url: getApiUrl(queryName),
     method: 'POST',
     data: {
       query: queries[queryName]
@@ -53340,10 +53350,16 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.$query = function (queryNam
     options.data.variables = queryVariables;
   }
 
+  var token = sessionStorage.getItem('api-token');
+
+  if (token) {
+    options.headers = {
+      Authorization: "Bearer ".concat(token)
+    };
+  }
+
   return axios__WEBPACK_IMPORTED_MODULE_1___default()(options);
-}; // Vue.prototype.$apiQueries = {
-//
-// };
+};
 
 /***/ }),
 

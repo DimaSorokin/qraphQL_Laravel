@@ -3,7 +3,6 @@
 
 namespace App\GraphQL\Mutations;
 use Auth;
-use Cassandra\Type;
 use GraphQL;
 use GraphQL\Type\Definition\Type as GraphqlType;
 use Rebing\GraphQL\Support\Mutation;
