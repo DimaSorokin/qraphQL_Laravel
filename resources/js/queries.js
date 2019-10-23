@@ -28,6 +28,12 @@ let queries = {
     register: `mutation RegisterUser($displayName: String, $email: String, $password: String) {
         register(displayName: $displayName, email: $email, password: $password)
     }`,
+    users: `query GetUser{
+        users {
+            id,
+            name
+        }
+    }`
 };
 
 let guestQueries = [

@@ -47,6 +47,11 @@
                 tasks: []
             };
         },
+        created () {
+            this.$query('users').then(res => {
+                this.users = res.data.data.users;
+            })
+        },
         methods: {
             submitForm() {
             },

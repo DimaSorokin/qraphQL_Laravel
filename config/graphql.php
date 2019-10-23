@@ -104,6 +104,7 @@ return [
             'query' => [
                  'projects' => App\GraphQL\Queries\ProjectsQuery::class,
                  'check' => App\GraphQL\Queries\CheckAuthQuery::class,
+                 'users' => App\GraphQL\Queries\UsersQuery::class,
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
