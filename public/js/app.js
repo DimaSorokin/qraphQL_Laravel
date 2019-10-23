@@ -2098,7 +2098,18 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
-    submitForm: function submitForm() {},
+    submitForm: function submitForm() {
+      this.$query('saveProject', {
+        project: {
+          title: this.title,
+          description: this.description,
+          users: this.selectedUsers.map(function (u) {
+            return u.id;
+          }),
+          tasks: this.tasks
+        }
+      });
+    },
     addTask: function addTask() {
       this.tasks.push({
         title: '',
@@ -54334,7 +54345,8 @@ var queries = {
   login: "mutation LoginUser($email: String, $password: String) {\n        login(email: $email, password: $password)\n    }",
   check: "query CheckUserAuth {\n        check\n    }",
   register: "mutation RegisterUser($displayName: String, $email: String, $password: String) {\n        register(displayName: $displayName, email: $email, password: $password)\n    }",
-  users: "query GetUser{\n        users {\n            id,\n            name\n        }\n    }"
+  users: "query GetUser{\n        users {\n            id,\n            name\n        }\n    }",
+  saveProject: "mutation SaveProject($project: ProjectInput){\n        saveProject(project: $project)\n    }"
 };
 var guestQueries = ['login', 'register'];
 
