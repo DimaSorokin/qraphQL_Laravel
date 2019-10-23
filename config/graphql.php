@@ -108,7 +108,7 @@ return [
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
-//                'login' => App\GraphQL\Mutations\LoginMutation::class
+                'saveProject' => App\GraphQL\Mutations\SaveProjectMutation::class
             ],
             'middleware' => ['auth'],
             'method'     => ['get', 'post'],
@@ -137,8 +137,8 @@ return [
         'task' => App\GraphQL\Types\TaskTypes::class,
 
 
-        'projectType' => App\GraphQL\Inputs\ProjectInput::class,
-        'taskType' => App\GraphQL\Inputs\TaskInput::class,
+        'projectInput' => App\GraphQL\Inputs\ProjectInput::class,
+        'taskInput' => App\GraphQL\Inputs\TaskInput::class,
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
