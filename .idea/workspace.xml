@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b5f5b06-cc8d-4d9f-9dcb-d7f07c6c1dfd" name="Default Changelist" comment="displaying our new data">
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutations/RegisterMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/views/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/TaskEditor.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/views/CreateProject.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Queries/ProjectsQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Queries/ProjectsQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/queries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -179,7 +176,7 @@
       <workItem from="1571039100039" duration="3789000" />
       <workItem from="1571258129346" duration="3471000" />
       <workItem from="1571390005730" duration="1367000" />
-      <workItem from="1571763331816" duration="8485000" />
+      <workItem from="1571763331816" duration="10980000" />
     </task>
     <servers />
   </component>
